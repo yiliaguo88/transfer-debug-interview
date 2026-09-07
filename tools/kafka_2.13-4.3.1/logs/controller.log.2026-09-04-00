@@ -1,0 +1,2 @@
+[2026-09-04 00:33:32,426] INFO [QuorumController id=1] In the last 60000 ms period, 319 controller events were completed, which took an average of 14.19 ms each. The slowest event was writeNoOpRecord(2020249311), which took 41.41 ms. (org.apache.kafka.controller.EventPerformanceMonitor)
+[2026-09-04 00:34:32,420] INFO [QuorumController id=1] In the last 60000 ms period, 320 controller events were completed, which took an average of 14.67 ms each. The slowest event was writeNoOpRecord(1049743476), which took 43.40 ms. (org.apache.kafka.controller.EventPerformanceMonitor)

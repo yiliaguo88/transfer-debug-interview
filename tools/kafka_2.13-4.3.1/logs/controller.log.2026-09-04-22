@@ -1,0 +1,3 @@
+[2026-09-04 22:37:35,682] INFO [QuorumController id=1] Periodic task electPreferred generated 0 records in 20 microseconds. (org.apache.kafka.controller.PeriodicTaskControlManager)
+[2026-09-04 22:37:35,684] INFO [QuorumController id=1] Periodic task electUnclean generated 0 records in 14 microseconds. (org.apache.kafka.controller.PeriodicTaskControlManager)
+[2026-09-04 22:37:38,359] INFO [QuorumController id=1] In the last 60000 ms period, 320 controller events were completed, which took an average of 13.11 ms each. The slowest event was writeNoOpRecord(345866854), which took 56.53 ms. (org.apache.kafka.controller.EventPerformanceMonitor)
