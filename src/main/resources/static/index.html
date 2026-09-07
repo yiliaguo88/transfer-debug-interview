@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Transfer Debug</title>
+  <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Transfer Debug</h1>
+      <button onclick="reset()" class="reset">Reset</button>
+    </header>
+
+    <div id="accounts" class="accounts"></div>
+
+    <section>
+      <h2>Transfer</h2>
+      <div class="form">
+        <input id="requestId" placeholder="Request ID" value="REQ-001">
+        <input id="from" placeholder="From" value="10001">
+        <input id="to" placeholder="To" value="10002">
+        <input id="amount" placeholder="Amount" value="100.00">
+        <button onclick="singleTransfer()">Send</button>
+      </div>
+      <div id="singleResult"></div>
+    </section>
+
+    <section>
+      <h2>Concurrent Test</h2>
+      <div class="form">
+        <input id="concurrency" placeholder="Count" value="10" style="max-width:80px">
+        <button onclick="runConcurrent()">Run</button>
+      </div>
+      <div id="concurrentResult" class="concurrent-result"></div>
+    </section>
+
+    <section>
+      <h3>System State</h3>
+      <div id="summary" class="summary"></div>
+      <div id="validation" class="validation"></div>
+    </section>
+
+    <section>
+      <h3>Notifications</h3>
+      <div id="notifications" class="notifications"></div>
+    </section>
+
+    <section>
+      <h3>Activity Log</h3>
+      <pre id="log"></pre>
+    </section>
+  </main>
+  <script src="/app.js?v=5"></script>
+</body>
+</html>
