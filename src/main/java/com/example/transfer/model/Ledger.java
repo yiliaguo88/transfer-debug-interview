@@ -14,7 +14,7 @@ public class Ledger {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long transferId;
-    private String requestId;  // 预埋字段：用于幂等性检查，但未加唯一约束
+    private String requestId;
     private Long accountId;
     private BigDecimal amount;
     private String type;
