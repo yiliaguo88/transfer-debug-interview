@@ -53,6 +53,18 @@ public class TransferController {
         return Map.of("status", "reset-ok", "accounts", accounts.findAll());
     }
 
+    @GetMapping("/transfers/page")
+    public List<Transfer> getTransferPage(
+            @RequestParam(defaultValue = "1000000") long offset,
+            @RequestParam(defaultValue = "20") int limit) {
+        if (offset < 0 || limit < 1 || limit > 100) {
+            throw new org.springframework.web.server.ResponseStatusException(
+                    org.springframework.http.HttpStatus.BAD_REQUEST,
+                    "offset must be >= 0 and limit must be between 1 and 100");
+        }
+        return transfers.findHistoryPage(offset, limit);
+    }
+
     @GetMapping("/transfers/history")
     public List<Map<String, Object>> getTransferHistory() {
         List<Transfer> transferList = transfers.findAll();
